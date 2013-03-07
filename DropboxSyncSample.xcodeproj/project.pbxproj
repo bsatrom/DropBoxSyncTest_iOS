@@ -18,6 +18,11 @@
 		2E01C63B16E908500047C14E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E01C63A16E908500047C14E /* Default-568h@2x.png */; };
 		2E01C63E16E908500047C14E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E01C63C16E908500047C14E /* MainStoryboard.storyboard */; };
 		2E01C64116E908510047C14E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E01C64016E908510047C14E /* ViewController.m */; };
+		2E01C64816E9089F0047C14E /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01C64716E9089F0047C14E /* Dropbox.framework */; };
+		2E01C64A16E908CD0047C14E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01C64916E908CD0047C14E /* CFNetwork.framework */; };
+		2E01C64D16E908DC0047C14E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01C64B16E908DC0047C14E /* Security.framework */; };
+		2E01C64E16E908DC0047C14E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01C64C16E908DC0047C14E /* SystemConfiguration.framework */; };
+		2E01C65416E90D790047C14E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01C65316E90D790047C14E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		2E01C63D16E908500047C14E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2E01C63F16E908500047C14E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2E01C64016E908510047C14E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E01C64716E9089F0047C14E /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		2E01C64916E908CD0047C14E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2E01C64B16E908DC0047C14E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2E01C64C16E908DC0047C14E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2E01C65316E90D790047C14E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +54,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E01C65416E90D790047C14E /* QuartzCore.framework in Frameworks */,
+				2E01C64D16E908DC0047C14E /* Security.framework in Frameworks */,
+				2E01C64E16E908DC0047C14E /* SystemConfiguration.framework in Frameworks */,
+				2E01C64A16E908CD0047C14E /* CFNetwork.framework in Frameworks */,
 				2E01C62516E908500047C14E /* UIKit.framework in Frameworks */,
 				2E01C62716E908500047C14E /* Foundation.framework in Frameworks */,
 				2E01C62916E908500047C14E /* CoreGraphics.framework in Frameworks */,
+				2E01C64816E9089F0047C14E /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,11 @@
 		2E01C62316E908500047C14E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E01C65316E90D790047C14E /* QuartzCore.framework */,
+				2E01C64916E908CD0047C14E /* CFNetwork.framework */,
+				2E01C64C16E908DC0047C14E /* SystemConfiguration.framework */,
+				2E01C64B16E908DC0047C14E /* Security.framework */,
+				2E01C64716E9089F0047C14E /* Dropbox.framework */,
 				2E01C62416E908500047C14E /* UIKit.framework */,
 				2E01C62616E908500047C14E /* Foundation.framework */,
 				2E01C62816E908500047C14E /* CoreGraphics.framework */,
@@ -254,6 +274,10 @@
 		2E01C64516E908510047C14E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DropboxSyncSample/DropboxSyncSample-Prefix.pch";
 				INFOPLIST_FILE = "DropboxSyncSample/DropboxSyncSample-Info.plist";
@@ -265,6 +289,10 @@
 		2E01C64616E908510047C14E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DropboxSyncSample/DropboxSyncSample-Prefix.pch";
 				INFOPLIST_FILE = "DropboxSyncSample/DropboxSyncSample-Info.plist";
